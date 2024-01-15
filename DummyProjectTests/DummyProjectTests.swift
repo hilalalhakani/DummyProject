@@ -13,4 +13,7 @@ final class DummyProjectTests: XCTestCase {
         XCTAssertEqual(1, 1)
     }
 
+    func testZZ() {
+        XCTAssertEqual(2, 2)
+    }
 }
