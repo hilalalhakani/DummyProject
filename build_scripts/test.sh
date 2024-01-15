@@ -7,7 +7,7 @@ if $HAS_PACKAGES_CACHE_HIT; then
   echo "🎉Using cached dependencies"
   set -o pipefail && xcrun xcodebuild test \
     -scheme DummyProject \
-    -project DummyProject/DummyProject.xcodeproj \
+    -project DummyProject.xcodeproj \
     -skipPackageUpdates \
     -disableAutomaticPackageResolution \
     -clonedSourcePackagesDirPath "$PACKAGES_PATH" |
@@ -17,7 +17,7 @@ else
   echo "Cache not found, loading dependencies 🤕"
   set -o pipefail && xcrun xcodebuild test \
     -scheme DummyProject \
-    -project DummyProject/DummyProject.xcodeproj \
+    -project DummyProject.xcodeproj \
     -disableAutomaticPackageResolution \
     -clonedSourcePackagesDirPath "$PACKAGES_PATH" |
     xcbeautify --renderer github-actions
