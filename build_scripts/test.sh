@@ -8,6 +8,7 @@ if $HAS_PACKAGES_CACHE_HIT; then
   set -o pipefail && xcrun xcodebuild test \
     -scheme DummyProject \
     -project DummyProject.xcodeproj \
+    -destination 'platform=iOS Simulator,name=iPhone 14' \
     -skipPackageUpdates \
     -disableAutomaticPackageResolution \
     -clonedSourcePackagesDirPath "$PACKAGES_PATH" |
@@ -18,6 +19,7 @@ else
   set -o pipefail && xcrun xcodebuild test \
     -scheme DummyProject \
     -project DummyProject.xcodeproj \
+    -destination 'platform=iOS Simulator,name=iPhone 14' \
     -disableAutomaticPackageResolution \
     -clonedSourcePackagesDirPath "$PACKAGES_PATH" |
     xcbeautify --renderer github-actions
