@@ -6,8 +6,8 @@ if $HAS_PACKAGES_CACHE_HIT; then
     # if we have packages in cache, we skip resolution, via disableAutomaticPackageResolution
   echo "🎉Using cached dependencies"
   set -o pipefail && xcrun xcodebuild test \
-    -scheme NodeCrypto \
-    -project NodeCrypto/NodeCrypto.xcodeproj \
+    -scheme DummyProject \
+    -project DummyProject/DummyProject.xcodeproj \
     -skipPackageUpdates \
     -disableAutomaticPackageResolution \
     -clonedSourcePackagesDirPath "$PACKAGES_PATH" |
@@ -16,8 +16,8 @@ else
   # otherwise we run xcodebuild with full spm packages resolution
   echo "Cache not found, loading dependencies 🤕"
   set -o pipefail && xcrun xcodebuild test \
-    -scheme NodeCrypto \
-    -project NodeCrypto/NodeCrypto.xcodeproj \
+    -scheme DummyProject \
+    -project DummyProject/DummyProject.xcodeproj \
     -disableAutomaticPackageResolution \
     -clonedSourcePackagesDirPath "$PACKAGES_PATH" |
     xcbeautify --renderer github-actions
