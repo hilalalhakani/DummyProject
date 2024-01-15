@@ -26,6 +26,8 @@ jobs:
             ${{ runner.os }}-packages-
       - name: Enable macros
         run: defaults write com.apple.dt.Xcode IDESkipMacroFingerprintValidation -bool YES
+      - name: Set script permissions
+        run: chmod +x ./build_scripts/test.sh
       - name: Run tests
         run: ./build_scripts/test.sh
         env:
