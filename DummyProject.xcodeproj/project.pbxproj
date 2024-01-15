@@ -11,7 +11,19 @@
 		E7ABE01F2B55AD0A0003B5CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ABE01E2B55AD0A0003B5CC /* ContentView.swift */; };
 		E7ABE0212B55AD0C0003B5CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7ABE0202B55AD0C0003B5CC /* Assets.xcassets */; };
 		E7ABE0242B55AD0C0003B5CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7ABE0232B55AD0C0003B5CC /* Preview Assets.xcassets */; };
+		E7ABE02C2B55AF060003B5CC /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = E7ABE02B2B55AF060003B5CC /* ComposableArchitecture */; };
+		E7ABE0342B55AF170003B5CC /* DummyProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ABE0332B55AF170003B5CC /* DummyProjectTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E7ABE0352B55AF170003B5CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7ABE0112B55AD0A0003B5CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7ABE0182B55AD0A0003B5CC;
+			remoteInfo = DummyProject;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E7ABE0192B55AD0A0003B5CC /* DummyProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DummyProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +31,20 @@
 		E7ABE01E2B55AD0A0003B5CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E7ABE0202B55AD0C0003B5CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7ABE0232B55AD0C0003B5CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E7ABE0312B55AF170003B5CC /* DummyProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DummyProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7ABE0332B55AF170003B5CC /* DummyProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyProjectTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E7ABE0162B55AD0A0003B5CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7ABE02C2B55AF060003B5CC /* ComposableArchitecture in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7ABE02E2B55AF170003B5CC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				E7ABE01B2B55AD0A0003B5CC /* DummyProject */,
+				E7ABE0322B55AF170003B5CC /* DummyProjectTests */,
 				E7ABE01A2B55AD0A0003B5CC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				E7ABE0192B55AD0A0003B5CC /* DummyProject.app */,
+				E7ABE0312B55AF170003B5CC /* DummyProjectTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +91,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		E7ABE0322B55AF170003B5CC /* DummyProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				E7ABE0332B55AF170003B5CC /* DummyProjectTests.swift */,
+			);
+			path = DummyProjectTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +115,30 @@
 			dependencies = (
 			);
 			name = DummyProject;
+			packageProductDependencies = (
+				E7ABE02B2B55AF060003B5CC /* ComposableArchitecture */,
+			);
 			productName = DummyProject;
 			productReference = E7ABE0192B55AD0A0003B5CC /* DummyProject.app */;
 			productType = "com.apple.product-type.application";
+		};
+		E7ABE0302B55AF170003B5CC /* DummyProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7ABE0372B55AF170003B5CC /* Build configuration list for PBXNativeTarget "DummyProjectTests" */;
+			buildPhases = (
+				E7ABE02D2B55AF170003B5CC /* Sources */,
+				E7ABE02E2B55AF170003B5CC /* Frameworks */,
+				E7ABE02F2B55AF170003B5CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7ABE0362B55AF170003B5CC /* PBXTargetDependency */,
+			);
+			name = DummyProjectTests;
+			productName = DummyProjectTests;
+			productReference = E7ABE0312B55AF170003B5CC /* DummyProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +153,10 @@
 					E7ABE0182B55AD0A0003B5CC = {
 						CreatedOnToolsVersion = 15.2;
 					};
+					E7ABE0302B55AF170003B5CC = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = E7ABE0182B55AD0A0003B5CC;
+					};
 				};
 			};
 			buildConfigurationList = E7ABE0142B55AD0A0003B5CC /* Build configuration list for PBXProject "DummyProject" */;
@@ -111,11 +168,15 @@
 				Base,
 			);
 			mainGroup = E7ABE0102B55AD0A0003B5CC;
+			packageReferences = (
+				E7ABE02A2B55AF060003B5CC /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = E7ABE01A2B55AD0A0003B5CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				E7ABE0182B55AD0A0003B5CC /* DummyProject */,
+				E7ABE0302B55AF170003B5CC /* DummyProjectTests */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +188,13 @@
 			files = (
 				E7ABE0242B55AD0C0003B5CC /* Preview Assets.xcassets in Resources */,
 				E7ABE0212B55AD0C0003B5CC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7ABE02F2B55AF170003B5CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +210,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E7ABE02D2B55AF170003B5CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7ABE0342B55AF170003B5CC /* DummyProjectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E7ABE0362B55AF170003B5CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7ABE0182B55AD0A0003B5CC /* DummyProject */;
+			targetProxy = E7ABE0352B55AF170003B5CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E7ABE0252B55AD0C0003B5CC /* Debug */ = {
@@ -197,7 +281,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +338,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -269,9 +353,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DummyProject/Preview Content\"";
+				DEVELOPMENT_TEAM = MPX8X82EXW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -284,8 +370,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = home.DummyProject;
+				PRODUCT_BUNDLE_IDENTIFIER = home.DummyProjectasdasd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -297,9 +384,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DummyProject/Preview Content\"";
+				DEVELOPMENT_TEAM = MPX8X82EXW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -312,11 +401,54 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = home.DummyProject;
+				PRODUCT_BUNDLE_IDENTIFIER = home.DummyProjectasdasd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E7ABE0382B55AF170003B5CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MPX8X82EXW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = home.DummyProjectTests;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = home.DummyProjectasdasd;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DummyProject.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DummyProject";
+			};
+			name = Debug;
+		};
+		E7ABE0392B55AF170003B5CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MPX8X82EXW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = home.DummyProjectTests;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = home.DummyProjectasdasd;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DummyProject.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DummyProject";
 			};
 			name = Release;
 		};
@@ -341,7 +473,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		E7ABE0372B55AF170003B5CC /* Build configuration list for PBXNativeTarget "DummyProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7ABE0382B55AF170003B5CC /* Debug */,
+				E7ABE0392B55AF170003B5CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E7ABE02A2B55AF060003B5CC /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E7ABE02B2B55AF060003B5CC /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7ABE02A2B55AF060003B5CC /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E7ABE0112B55AD0A0003B5CC /* Project object */;
 }
